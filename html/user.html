@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+<div class="main-content">
+     <div class="top-bar">
+           </div>
+    <div class="page-header">
+        <h1>User Management</h1>
+    </div>
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="icon blue">
+                <i class="bi bi-people"></i>
+            </div>
+            <div>
+                <h4>Total Users</h4>
+                <h2>120</h2>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="icon green">
+                <i class="bi bi-person-check"></i>
+            </div>
+            <div>
+                <h4>Active Users</h4>
+                <h2>105</h2>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="icon purple">
+                <i class="bi bi-person-badge"></i>
+            </div>
+            <div>
+                <h4>Managers</h4>
+                <h2>12</h2>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="icon orange">
+                <i class="bi bi-person-plus"></i>
+            </div>
+            <div>
+                <h4>New This Month</h4>
+                <h2>8</h2>
+            </div>
+        </div>
+
+    </div>
+    <div class="toolbar">
+        <input type="text"  placeholder="Search users...">
+        <select>
+            <option>All Roles</option>
+            <option>Admin</option>
+            <option>Manager</option>
+            <option>User</option>
+        </select>
+        <button class="add-btn">  <i class="bi bi-plus-lg"></i> Add User </button>
+    </div>
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sriman</td>
+                    <td>sriman@gmail.com</td>
+                    <td>Admin</td>
+                    <td>
+                        <span class="status active"> Active</span>
+                    </td>
+                    <td>
+                        <button class="edit-btn">  Edit </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Shrikanth</td>
+                    <td>shri@gmail.com</td>
+                    <td>Manager</td>
+                    <td>
+                        <span class="status active">  Active </span>
+                    </td>
+                    <td>
+                        <button class="edit-btn">  Edit </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jayasri</td>
+                    <td>jaya@gmail.com</td>
+                    <td>User</td>
+                    <td>
+                        <span class="status inactive"> Inactive</span>
+                    </td>
+                    <td>
+                        <button class="edit-btn"> Edit </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="../js/user.js"></script>
+</body>
+</html>

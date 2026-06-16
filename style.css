@@ -1,0 +1,79 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100%;
+    background-size:cover;
+    background-position: center;
+    padding:100px;
+    overflow:hidden;
+    background-image:url(https://static.vecteezy.com/system/resources/thumbnails/075/207/179/large/abstract-deep-blue-and-purple-gradient-with-smooth-flowing-curves-and-soft-blur-modern-minimal-background-with-dramatic-mood-and-copy-space-for-technology-creative-or-digital-themes-video.jpg);
+}
+.container {
+    width:460px;
+    background-color: rgb(32, 3, 126);
+    border:1px grey;
+    backdrop-filter:blur(10px);
+    color:white;
+    border-radius:15px;
+    padding:70px;
+}
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:45px;
+}
+.input-box{
+    margin:20px;
+    padding:5px;
+    margin-left:15px;
+}
+.input-box label{
+    display:block;
+    margin-bottom:10px;
+    font-size:20px;
+}
+.input-box input{
+    width:100%;
+    height:50px;
+    border-radius:25px;
+    padding:20px;
+    background-color:aliceblue;
+    color:black;
+    font-size:16px;
+    border: none;
+    
+}
+.btn{
+    width:150px;
+    height:40px;
+    border-radius:25px;
+    background-color:rgb(25, 25, 245);
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+    margin-top:40px;
+    align-self:center;
+    display:block;
+    position:absolute;
+    margin-left:60px;
+}
+.btn:hover{
+    background-color:rgb(3, 44, 195);
+    color:#ffffff;
+}
+#error-msg{
+    color:rgb(245, 239, 239);
+    font-size:13px;
+    margin-top: 10px;
+    text-align:center;
+}
+

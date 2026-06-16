@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f5f7fb;
+    display: flex;
+    font-size:15px;
+    padding:30px;
+}
+.main {
+    flex: 1;
+    padding: 30px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-bar{
+    text-align:right;
+}
+.filters {
+    margin-top: 25px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.filters input,.filters select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.cards {
+    margin: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.card i {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+}
+.green {
+    background: #dcfce7; color: #16a34a;
+}
+.purple {
+    background: #f3e8ff;  color: #9333ea;
+}
+.blue {
+    background: #dbeafe;  color: #2563eb;
+}
+.orange {
+    background: #ffedd5;
+    color: #ea580c;
+}
+.table-container {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead {
+    background: #f8fafc;
+}
+th,td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.completed {
+    background: #dcfce7; color: #15803d;
+}
+.pending {
+    background: #fef3c7;
+    color: #ca8a04;
+}
+.open {
+    background: #dbeafe;
+    color: #2563eb;
+}
+.overdue {
+    background: #fee2e2;
+    color: #dc2626;
+}
+@media(max-width:1200px){
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .filters{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:768px){
+    .sidebar{
+        display:none;
+    }
+    .cards{
+        grid-template-columns:1fr;
+    }
+    .filters{
+        grid-template-columns:1fr;
+    }
+}
+html,body{
+    overflow-y:auto;
+    scrollbar-width:none;      
+    -ms-overflow-style:none;  
+}
+html::-webkit-scrollbar,body::-webkit-scrollbar{
+    display:none;             
+}

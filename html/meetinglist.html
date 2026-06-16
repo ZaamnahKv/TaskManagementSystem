@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meeting List</title>
+    <link rel="stylesheet" href="../css/meetinglist.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2><i class="bi bi-alarm"></i> Meeting List</h2>
+        <div class="action-buttons">
+        <button id="addbtn" class="add-btn">Add Meeting</button>
+    </div>
+    </div>
+    <div class="filters">
+        <select>
+            <option>Select</option>
+            <option>Jan 2026</option>
+            <option>Feb 2026</option>
+            <option>Mar 2026</option>
+            <option>Apr 2026</option>
+            <option>May 2026</option>
+            <option>Jun 2026</option>
+        </select>
+        <input type="date">
+        <input type="date">
+        <select>
+            <option>All</option>
+            <option>Sriman</option>
+            <option>Karthik</option>
+            <option>Shrikanth</option>
+             <option>Jayasri</option>
+        </select>
+        <input type="text" placeholder="Search Meeting">
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Meeting Title</th>
+                <th>Meeting Date</th>
+                <th>Start Time</th>
+                <th>Duration (hrs)</th>
+                <th>Organizer</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Project Discussion</td>
+                <td>02-Jun-2026</td>
+                <td>09:30 AM</td>
+                <td>1.50</td>
+                <td>Sriman</td>
+                <td>
+                    <button class="view">👁</button>
+                    <button class="edit">✏</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Client Meeting</td>
+                <td>03-Jun-2026</td>
+                <td>11:00 AM</td>
+                <td>2.00</td>
+                <td>Karthik</td>
+                <td>
+                    <button class="view">👁</button>
+                    <button class="edit">✏</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Sprint Planning</td>
+                <td>05-Jun-2026</td>
+                <td>10:00 AM</td>
+                <td>1.00</td>
+                <td>Shrikanth</td>
+                <td>
+                    <button class="view">👁</button>
+                    <button class="edit">✏</button>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Review Meeting</td>
+                <td>06-Jun-2026</td>
+                <td>04:00 PM</td>
+                <td>1.50</td>
+                <td>Jayasri</td>
+                <td>
+                    <button class="view">👁</button>
+                    <button class="edit">✏</button>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Team Sync</td>
+                <td>07-Jun-2026</td>
+                <td>09:00 AM</td>
+                <td>0.75</td>
+                <td>Jayasri</td>
+                <td>
+                    <button class="view">👁</button>
+                    <button class="edit">✏</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="../js/meeting.js"></script>
+</body>
+</html>

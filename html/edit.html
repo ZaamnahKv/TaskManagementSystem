@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="../css/edit.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2><i class="bi bi-pencil-square"></i> Edit Task</h2>
+    </div>
+    <form>
+        <div class="box">
+            <label >Title </label>
+            <input type="text"  id="title" value="API Development">
+        </div>
+        <div class="box">
+            <label>Description</label>
+            <textarea id="description" placeholder="Enter description"></textarea>
+        </div>
+        <div class="row">
+            <div class="field">
+                <label>Assigned To </label>
+                <select id="assignedto">
+                    <option>ShriKanth</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Priority </label>
+                <select id="priority">
+                    <option>High</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <label>Start Date</label>
+                <input id="startdate"   type="text"  value="09-04-2026">
+            </div>
+            <div class="field">
+                <label>Due Date </label>
+                <input id="duedate" type="text" value="28-04-2026">
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <label>Status </label>
+                <select id="status">
+                    <option>In Progress</option>
+                </select>
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="submit" class="save-btn" id="savebtn">Save</button>
+            <button type="reset" class="cancel-btn" id="cancelbtn">Cancel</button>
+        </div>
+    </form>
+</div>
+<script src="../js/edit.js"></script>
+</body>
+</html>

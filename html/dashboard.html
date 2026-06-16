@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container">
+<div class="sidebar">
+    <button class="menu-btn"><i class="bi bi-list"></i></button>
+    <h6><i class="bi bi-clipboard-check"></i> <span>Task Management System </span> </h6>
+    <button id="dashboardbtn"><i class="bi bi-house-door"></i> Dashboard</button>
+   <button id="taskbtn">
+    <span> <i class="bi bi-list-task"></i> Tasks </span>
+    <i class="bi bi-chevron-down"></i>
+</button>
+<div id="tasksubmenu" class="submenu popup-submenu">
+    <button id="taskpagebtn">Task List</button>
+    <button id="addtaskbtn">Add Task</button>
+    <button id="edittaskbtn">Edit Task</button>
+    <button id="taskdetailsbtn">Task Details</button>
+</div>
+      <button id="meetingbtn">
+    <span>   <i class="bi bi-calendar-event"></i> Meeting </span>
+    <i class="bi bi-chevron-down"></i>
+</button>
+   <div id="meetingsubmenu" class="submenu popup-submenu">
+            <button id="addmeetingbtn" class="submenu-btn"> Add Meeting </button>
+            <button id="meetingdetailsbtn" class="submenu-btn">Meeting Details</button>
+        </div>
+    <button id="worklogsbtn"><i class="bi bi-clock-history"></i>  Work Logs</button>
+    <button id="usersbtn"><i class="bi bi-person-check"></i> Users</button>
+    <button id="reportsbtn"> <i class="bi bi-file-earmark-bar-graph"></i> Reports</button>
+    <button id="settingsbtn"> <i class="bi bi-gear"></i> Settings</button>
+    <div class="bottom-section">
+    <hr class="sidebar-line">
+    <button id="out-btn" class="logout-btn" onclick="logout()" ><i class="bi bi-box-arrow-right"></i> Logout</button>
+</div>
+</div>
+<div class="main-content" id="maincontent">
+    <div id="dashboard-content">
+    <div class="dashboard-header">
+        <h1>Dashboard</h1>
+    </div>
+    <div class="stats-container">
+        <div class="stat-card">
+         <div class="icon blue"> <i class="bi bi-clipboard-check"></i></div>
+         <div class="details">
+         <h4>Total Tasks</h4>
+         <h2>150</h2>
+        <a href="#">View all tasks</a>
+        </div>
+    </div>
+        <div class="stat-card">
+         <div class="icon green"> <i class="bi bi-check-lg"></i></div>
+            <div class="details">
+             <h4>Completed Tasks</h4>
+             <h2>90</h2>
+             <p>60% of total</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="icon orange"><i class="bi bi-hourglass"></i> </div>
+            <div class="details">
+            <h4>Pending Tasks</h4>
+            <h2>40</h2>
+            <p>26.67% of total</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="icon purple"> <i class="bi bi-play-fill"></i></div>
+            <div class="details">
+                <h4>Open Tasks</h4>
+                <h2>15</h2>
+                <p>10% of total</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="icon red"><i class="bi bi-exclamation-lg"></i></div>
+            <div class="details">
+                <h4>Overdue Tasks</h4>
+                <h2>5</h2>
+                <p>3.33% of total</p>
+            </div>
+        </div>
+    </div>
+<div class="dashboard-row">
+    <div class="chart-card">
+        <div class="card-header">
+            <h4>Tasks Completed This Month</h4>
+            <select>
+                <option>Jan 2026</option> <option>Feb 2026</option> <option>Mar 2026</option> <option>Apr 2026</option> <option>May 2026</option> <option>Jun 2026</option>
+            </select>
+        </div>
+        <div class="bar-chart">
+            <div class="bar-item">
+                <div class="bar" style="height:75px;">
+                    <span>23</span>
+                </div>
+                <p>Sriman</p>
+            </div>
+            <div class="bar-item">
+                <div class="bar" style="height:100px;">
+                    <span>27</span>
+                </div>
+                <p>Shrikanth</p>
+            </div>
+            <div class="bar-item">
+                <div class="bar" style="height:88px;">
+                    <span>26</span>
+                </div>
+                <p>Jayasri</p>
+            </div>
+            <div class="bar-item">
+                <div class="bar" style="height:90px;">
+                    <span>25</span>
+                </div>
+                <p>Karthick</p>
+            </div>
+        </div>
+    </div>
+    <div class="meeting-card">
+        <h4>Meeting Summary (This Month)</h4>
+        <div class="meeting-grid">
+            <div class="meeting-box">
+                <h4><i class="bi bi-calendar"></i> Total Meetings</h4>
+                <h2>45</h2>
+            </div>
+            <div class="meeting-box">
+                <h4><i class="bi bi-clock"></i> Total Meeting Hours</h4>
+                <h2>78.50 hrs</h2>
+            </div>
+            <div class="meeting-box">
+                <h4><i class="bi bi-people"></i> Avg. Meeting Hours</h4>
+                <h2>19.63 hrs</h2>
+            </div>
+            <div class="meeting-box">
+                <h4><i class="bi bi-person-workspace"></i> Most Active Employee</h4>
+                <h2>Shrikanth</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom-row">
+    <div class="status-card">
+        <h4>Tasks by Status</h4>
+       <div class="chart-grid">
+    <div class="donut-chart">
+        <div class="donut-center">
+            <h2>100</h2>
+            <p>Tasks</p>
+        </div>
+    </div>
+            <div class="status-legend">
+                <div><span class="dot completed"></span> Completed (60)</div>
+                <div><span class="dot pending"></span> Pending (20)</div>
+                <div><span class="dot open"></span> Open (10)</div>
+                <div><span class="dot overdue"></span> Overdue (10)</div>
+            </div>
+        </div>
+    </div>
+    <div class="work-card">
+        <h4>Work vs Meeting Hours</h4>
+      <div class="chart-grid">
+    <div class="donut-chart work-donut">
+        <div class="donut-center">
+            <h2>75%</h2>
+            <p>Work</p>
+        </div>
+    </div>
+            <div class="status-legend">
+                <div>
+                    <span class="dot work"></span>
+                    Work Hours - 75%
+                </div>
+                <div>
+                    <span class="dot meeting"></span>
+                    Meeting Hours - 25%
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recent-card">
+        <h4>Recent Tasks</h4>
+        <table class="task-table">
+            <thead>
+                <tr>
+                    <th>Task</th> <th>Assigned To</th> <th>Status</th> <th>Due Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>UI Design</td> <td>Sriman</td>
+                    <td><span class="status completed">Completed</span></td>
+                    <td>20 Jun 2026</td>
+                </tr>
+                <tr>
+                    <td>API Integration</td> <td>Shrikanth</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td>10 Jun 2026</td>
+                </tr>
+                <tr>
+                    <td>Testing Module</td> <td>Jayasri</td>
+                    <td><span class="status open">Open</span></td>
+                    <td>10 Jun 2026</td>
+                </tr>
+                <tr>
+                    <td>Documentation</td> <td>Karthick</td>
+                    <td><span class="status completed">Completed</span></td>
+                    <td>05 Jun 2026</td>
+                </tr>
+                <tr>
+                    <td>Database Update</td> <td>Sriman</td>
+                    <td><span class="status overdue">Overdue</span></td>
+                    <td>03 Jun 2026</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="productivity-card">
+    <h4>Employee Productivity (This Month)</h4>
+    <table class="task-table">
+        <thead>
+            <tr>
+                <th>Employee</th> <th>Assigned</th> <th>Completed</th> <th>Pending</th> <th>Hours</th> <th>Productivity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sriman</td> <td>30</td> <td>28</td> <td>2</td> <td>160 hrs</td>
+                <td><span class="status completed">93%</span></td>
+            </tr>
+            <tr>
+                <td>Shrikanth</td> <td>35</td> <td>30</td> <td>5</td> <td>155 hrs</td>
+                <td><span class="status open">86%</span></td>
+            </tr>
+            <tr>
+                <td>Jayasri</td> <td>28</td> <td>22</td> <td>6</td> <td>145 hrs</td>
+                <td><span class="status pending">79%</span></td>
+            </tr>
+            <tr>
+                <td>Karthick</td> <td>32</td> <td>31</td> <td>1</td> <td>165 hrs</td>
+                <td><span class="status completed">97%</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    </div>
+    </div>
+    <div id="popup-overlay" class="popup-overlay">
+    <div class="popup-window">
+        <button class="close-btn" onclick="closePopup()">✕</button>
+
+        <iframe id="popup-frame"></iframe>
+    </div>
+</div>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
